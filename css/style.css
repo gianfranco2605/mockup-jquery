@@ -44,6 +44,19 @@ a {
   padding: 10rem 0;
 }
 
+/* section gift cards */
+
+.gift-cards {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+}
+
+.text-gift-cards {
+  margin-top: 30px;
+}
+
 /* Buttons */
 .btn {
   padding: 1rem;
@@ -145,6 +158,10 @@ a {
   background-color: var(--light-color);
   color: #333;
 }
+
+.text-center {
+  text-align: center;
+}
 /* navigation */
 nav {
   height: 40px;
@@ -240,6 +257,16 @@ nav a#openup {
     width: 100%;
     position: relative;
   }
+
+  .gift-cards {
+    grid-template-columns: 1fr; /* Change to a single column for smaller screens */
+    text-align: center;
+    grid-gap: 0px;
+  }
+
+  footer .container .footer-cols {
+    display: none;
+  }
 }
 .cf:before,
 .cf:after {
@@ -253,6 +280,37 @@ nav a#openup {
 
 .cf {
   zoom: 1;
+}
+
+/* footer  */
+
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-size: 14px;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .footer-cols ul li:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #444 solid 1px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-cols ul {
+  list-style: none;
+}
+
+footer .footer-bottom {
+  background: #333;
+  padding: 1rem;
 }
 
 /* For IE 6/7 (trigger hasLayout) */
